@@ -13,7 +13,7 @@ body{
 
 
 .container{
-    width: 1280px;
+   width: 1280px;
  background-color: #fff;
 display:block
 
@@ -49,6 +49,61 @@ box-shadow: 0px 0px 10px rgba(167, 161, 161, 0.6);
 
 
 }
+
+@media (min-width:1200px)
+{
+
+.container{
+
+
+  max-width:100vw;
+}  
+
+
+.header-area{
+
+    max-width: 100vw;  
+  }
+
+
+  .first-row{
+
+ max-width: 100vw;
+
+  }
+
+
+
+  
+.main-banner{
+    max-width:100vw;
+    min-height: 100vw;
+    
+
+ }
+ .gym{
+
+   min-width: 100%;
+   max-width: 100%;
+   min-height: 100vw;
+  object-fit: cover;
+  background-position: center;
+  
+   
+  
+} 
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 #contact {
@@ -87,7 +142,45 @@ height: 80px;
   
 }
 
+.header-area.home-nav .nav-bar a {
+  color: #fff;
+}
 
+.header-area .nav-bar a {
+  color: #000;
+}
+
+
+.header-area.home-nav .logo-name {
+  color: #fff;
+}
+
+.header-area  .logo-name{
+  color: #000;
+}
+
+.header-area .nav-bar a:hover{
+
+   color: #ed563b;
+}
+
+
+
+.header-area.home-nav .nav-bar a {
+  color: #fff;
+}
+
+
+.nav-bar a {
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+
+.nav-bar a.active {
+  color: #ed563b;
+  font-weight: bold;
+}
 
 
 .logo{
@@ -365,6 +458,14 @@ font-size: 36px;
   margin: 15px 0px 25px 0px;
 }
 
+
+
+
+/* Link active */
+.date a.active {
+  color: #ed563b;
+  font-weight: bold;
+}
 .second{
 
 
@@ -376,9 +477,8 @@ font-size: 36px;
   font-weight: 400;
   text-transform: uppercase;
   border: none; 
+  text-decoration: none;
 }
-
-
 
 .our-classes{
     width: 1140px;
@@ -650,9 +750,9 @@ margin-top: 60px;
 
 .grid{
   display: grid;
-  grid-template-columns: 253px  253px  253px  253px;
-  grid-template-rows:  100px 100px 100px 100px 100px; 
-  
+  grid-template-columns:repeat(4, 1fr);
+  /* grid-template-rows:  100px 100px 100px 100px 100px;  */
+
   width: 950px;
 
  
@@ -661,6 +761,8 @@ margin-top: 60px;
 }
 
 .item{
+  width: 253px;
+  height: 100px;
   color: #fff;
   font-size: 16px;
   border:  1px solid #fff;
