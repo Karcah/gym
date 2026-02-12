@@ -22,12 +22,15 @@
 
         <div class="header-flex">
 
+            
+
 <div class="logo">
     <span class="logo-name"> TRAINIG</span>
     <span id="studio">STUDIO</span>
 </div>
 
-<div class="menu">
+
+    <nav class="menu">
     <ul>
 <li class="home"> <a href="#home"> HOME</a></li>
 <li class="about"> <a href="#about"> ABOUT</a></li>
@@ -36,7 +39,14 @@
 <li class="contact"> <a href="#contact"> CONTACT</a></li>
 <li class="signup"> <a href="#Signup">SIGN UP</a></li>
     </ul>
+</nav>
+
+<div class="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
 </div>
+
 
 </div>
     </div>
@@ -48,24 +58,18 @@
 
 <div id="home" class="hero-section">
 
-    
-    <video class="gym" src="gym.mp4" autoplay muted loop>  </video>
+  <video class="gym" src="gym.mp4" autoplay muted loop></video>
 
-<div class="over-lay"></div>
+  <div class="over-lay"></div>
 
- 
-
-<div class="easy">
-    <h2>easy with our <em > gym</em> </h2>
-</div>
-
-<div class="work">
-    <h6> WORK HARD, GET STRONGER</h6>
-</div>
-
-<button class="become"> become a member</button>
+  <div class="hero-content">
+      <h6 class="work">WORK HARD, GET STRONGER</h6>
+      <h2 class="easy">EASY WITH OUR <em>GYM</em></h2>
+      <button class="become">BECOME A MEMBER</button>
+  </div>
 
 </div>
+
 
 
 <section class="features">
@@ -325,13 +329,7 @@ Basic Muscle Course</h4>
 
 
 
-
-   
-     
-
    </div>
-
-     
   </div>
 
 
@@ -416,22 +414,26 @@ Basic Muscle Course</h4>
 
 <div class="map">
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31910.668486683702!2d36.83627376027322!3d-1.273019612215341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f16b02d007251%3A0xb8beb2dbf14a0af4!2sEastleigh%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1770633275493!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31910.668486683702!2d36.83627376027322!3d-1.273019612215341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f16b02d007251%3A0xb8beb2dbf14a0af4!2sEastleigh%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1770633275493!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 </div>
 
  <div class="last-contact">
 <form class="form">
-    
-<input class="first-input" type="text" name="name" placeholder="Your Name">
-<input  class="first-input" type="email" name="email" placeholder="Your email">
 
-<input  class="subject" type="text" name="subject" placeholder="Subject">
+<div class="row-input">
+  <input class="first-input" type="text" placeholder="Your Name">
+  <input class="first-input" type="email" placeholder="Your Email">
+</div>
 
-<textarea class="message"  name="message" placeholder="Message" rows="6"></textarea>
+<input class="subject" type="text" placeholder="Subject">
 
-<a class="send-message" href="index.html"> send message </a>
+<textarea class="message" placeholder="Message"></textarea>
+
+<a class="send-message" href="#">Send Message</a>
+
 </form>
+
 
 </div>
 

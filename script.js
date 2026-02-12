@@ -1,79 +1,84 @@
+document.addEventListener("DOMContentLoaded", function () {
 
+  const header = document.querySelector(".header-area");
+  const navLinks = document.querySelectorAll(".menu a");
+  const sections = document.querySelectorAll("[id]");
+  const homeSection = document.querySelector("#home");
+  const aboutSection = document.querySelector("#about");
 
+  const hamburger = document.querySelector(".hamburger");
+  const menu = document.querySelector(".menu");
 
-// // ==============================
-// // HEADER + NAV ACTIVE SYSTEM
-// // ==============================
+  /* ======================
+     HAMBURGER TOGGLE
+  ======================= */
 
-// const header = document.querySelector(".header-area");
-// const navLinks = document.querySelectorAll(".nav-bar a");
+  if (hamburger && menu) {
+    hamburger.addEventListener("click", function () {
+      hamburger.classList.toggle("active");
+      menu.classList.toggle("active");
+    });
+  }
 
-// // sections kasta oo leh id (home, about, classes, iwm)
-// const sections = document.querySelectorAll("[id]");
+  /* ======================
+     SCROLL SYSTEM
+  ======================= */
 
-// // section-yada muhiimka ah
-// const homeSection = document.querySelector("#home");
-// const aboutSection = document.querySelector("#about");
+  if (header && homeSection && aboutSection) {
 
-// if (header && homeSection && aboutSection) {
-//   const aboutTop = aboutSection.offsetTop;
+    const aboutTop = aboutSection.offsetTop;
 
-//   window.addEventListener("scroll", () => {
-//     const scrollY = window.scrollY;
-//     const scrollPos = scrollY + 120; // header height offset
+    window.addEventListener("scroll", () => {
 
-//     /* ======================
-//        HEADER BEHAVIOR
-//     ======================= */
+      const scrollY = window.scrollY;
+      const scrollPos = scrollY + 120;
 
-//     // HOME
-//     if (scrollY === 0) {
-//       header.classList.remove("hide");
-//       header.classList.add("transparent");
-//       header.classList.add("home-nav");
-//     }
-//     // Inta u dhexeysa HOME → ABOUT
-//     else if (scrollY < aboutTop) {
-//       header.classList.add("hide");
-//       header.classList.remove("transparent");
-//       header.classList.remove("home-nav");
-//     }
-//     // ABOUT iyo wixii ka dambeeya
-//     else {
-//       header.classList.remove("hide");
-//       header.classList.remove("transparent");
-//       header.classList.remove("home-nav");
-//     }
+      // HEADER BEHAVIOR
 
-//     /* ======================
-//        NAV ACTIVE LINK
-//     ======================= */
+      if (scrollY === 0) {
+        header.classList.remove("hide");
+        header.classList.add("transparent");
+        header.classList.add("home-nav");
+      }
+      else if (scrollY < aboutTop) {
+        header.classList.add("hide");
+        header.classList.remove("transparent");
+        header.classList.remove("home-nav");
+      }
+      else {
+        header.classList.remove("hide");
+        header.classList.remove("transparent");
+        header.classList.remove("home-nav");
+      }
 
-//     let currentSection = "";
+      // ACTIVE LINK SYSTEM
 
-//     sections.forEach(section => {
-//       const sectionTop = section.offsetTop;
-//       const sectionHeight = section.offsetHeight;
+      let currentSection = "";
 
-//       if (
-//         scrollPos >= sectionTop &&
-//         scrollPos < sectionTop + sectionHeight
-//       ) {
-//         currentSection = section.getAttribute("id");
-//       }
-//     });
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
 
-//     navLinks.forEach(link => {
-//       link.classList.remove("active");
+        if (
+          scrollPos >= sectionTop &&
+          scrollPos < sectionTop + sectionHeight
+        ) {
+          currentSection = section.getAttribute("id");
+        }
+      });
 
-//       if (link.getAttribute("href") === `#${currentSection}`) {
-//         link.classList.add("active");
-//       }
-//     });
-//   });
-// }
+      navLinks.forEach(link => {
+        link.classList.remove("active");
 
+        if (link.getAttribute("href") === `#${currentSection}`) {
+          link.classList.add("active");
+        }
+      });
 
+    });
+  }
+
+});
 
 
 
